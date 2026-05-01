@@ -8,22 +8,108 @@
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self';style-src 'self',img-src 'self'; connect-src https://cdn.jsdelivr.net/"> -->
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
         <header>
-            <h1>Ship Theory: Exploring Patterns in BL Ships</h1>
+            <h1>Ship Theory</h1>
+            <p> A short essay and analysis on patterns in Thailand's BL ships</p>
         </header>
-        <nav></nav>
-        <main><canvas id="chart"></canvas></main>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+        <main>
+            <section id="introduction">
+                <h2>Introduction </h2>
+                <p>While other Asian countries such as South Korea, Japan, and China saw an explosion of popularity with romantic dramas, Thai series (lakorns) initially did not garner the same global interest. Instead, the success of dramas such as The Love of Siam (2007) and Sotus The Series (2016) demonstrated that Thailand had its own marketable product: Boys Love (BL).
+                    Thailand was not the first Asian country to dabble in this genre, yet it is now considered its largest producer. Other countries, like South Korea with A Frozen Flower (2008), explored the theme earlier; however, the genre remained on the fringe due to conservative societal norms and a lack of investment. Thailand seemingly bypassed these hurdles, being the second Asian country to legalize same-sex marriage after Taiwan. Once a niche interest, BL allowed Thailand to capture and lead this specific market.
+                    The takeover started with production agencies. Unlike Western countries an artist’s representation may be obscure, Thai agencies are integral to the artists brand. Production houses often double as talent agencies; they produce dramas while simultaneously representing artists. When an artist signs, they join a fully functional agency and production house. These agencies schedule brand deals, events, etc. and take part in the entire management of the artist. This is how the Thai entertainment industry has always functioned. Major channels, such as Channel 3 and Channel 7, sign artists who appear exclusively in shows produced by their respective channels.
+                    To understand pairings and their origins, one must understand the concept of “shipping.” In Thailand, this is known as “khu jin,” while in the Philippines, it is referred to as a “loveteam.” This concept is prevalent across Southeast Asian entertainment and is not limited to Boys' Love (BL) actors. It is also common in mainstream lakorn dramas. Some popular mainstream pairings include NadechYaya and MarkKim.
+                    Essentially, a pairing consists of two artists whom fans "ship" together due to their perceived chemistry, which drives fan engagement. While shipping culture is not new, as seen with K-pop idols being paired with group members or other public figures, Thailand differs by formalizing these arrangements. Because paired actors often work for the same agency, companies can establish them as a package deal for branding, casting, and sponsorships.
+                    Consequently, certain specific rules are followed and expected. The first involves the pairing or "ship" name, which establishes how the duo is addressed and how fans interact with them on social media. This naming convention generally follows a standard template: combining the names of the two actors into a single word based on the widely known SemeUke dynamic. In this structure, the Seme represents the dominant masculine partner, while the Uke represents the submissive partner who often takes on a more feminine role. These heteronormative positions are frequently utilized to solidify the specific roles each individual plays during public interactions or within their scripted series.
+                    Now that some background has been given to the world of Thai BL, below is further analysis.</p>
+            </section>
+            <section id="analysis1">
+                <h2>Analysis 1: Market Share</h2>
+                <p>The first analysis addresses which company holds the market share for BL pairings by identifying the agencies that produce the most "ships." The graph indicates that GMMTV holds the majority, with 44% of all BL pairings, nearly half of the market, originating from this single company. Domundi follows with 22%, while independent artists without an agency rank third at approximately 8%. Therefore, GMMTV and Domundi collectively house more than half of all BL ships in Thailand.</p>
+                <div><canvas id="production-count"></canvas></div>
+            </section>
+            <section id="analysis2">
+                <h2>Analysis 2: Fan Engagement</h2>
+                <p>This analysis identifies which production agencies possess the "ships" with the most traction, as this directly influences brand endorsements, sponsorships, and agency revenue. Each BL pairing is rated on a fan engagement scale from 1 (lowest) to 5 (highest) to measure popularity.
+                    The graph below specifically focuses on high-engagement pairings (those rated 4 or higher). GMMTV leads with 10 popular pairings, followed by Domundi with 5 popular pairings. This is perhaps expected, as agencies with a higher total number of pairings are likely to have a higher chance of producing highly popular ships.</p>
+                <div><canvas id="agency_engagement"></canvas></div>
+            </section>
+            <section id="analysis3">
+                <h2>Analysis 3: Height Gap</h2>
+                <p>Based on the chart below, a majority of active BL couples feature a taller seme. Specifically, 58% of semes are taller, 38% are the same height as the uke, and only 2% are shorter. This suggests that production agencies follow a specific formula where the seme is typically taller or of equal height. Despite this heteronormative trend, the large percentage of pairings with equal height may indicate a shift toward more organic, less rigid packaging.</p>
+                <div><canvas id="seme_taller_chart"></canvas></div>
+            </section>
+            <section id="analysis4">
+                <h2>Analysis 4: Age Gap</h2>
+                <p>Similar to the height gap analysis, the data indicates that in a majority of active BL couples, the seme is older. Specifically, 58% of semes are older, 20% are the same age as the uke, and 22% are younger. This results in a smaller overall discrepancy compared to height, suggesting that age may not be a primary consideration in pairing, as nearly half of all semes are either the same age as or younger than their partners.</p>
+                <div><canvas id="seme_older_chart"></canvas></div>
+            </section>
+            <section id="dataset">
+                <h2>Dataset</h2>
+                <div>
+                    <ul>
+                        <li><strong>seme_name:</strong> The name of the seme in the bl pairing</li>
+                        <li><strong>seme_age:</strong> The age of the seme in the bl pairing</li>
+                        <li><strong>uke_name:</strong> The name of the uke in the bl pairing</li>
+                        <li><strong>uke_age:</strong> The age of the seme in the bl pairing</li>
+                        <li><strong>seme_is_older1_same0_younger2:</strong> A number 0 to 2 depending on if the seme is older, same age, or younger than the uke.</li>
+                        <li><strong>seme_is_taller1_same0_shorter2:</strong> A number 0 to 2 depending on if the seme is taller, same height, or shorter than the uke.</li>
+                        <li><strong>fan_engagement_1_5:</strong> The popularity of the ship where 1 is the lowest and 5 is the highest.</li>
+                        <li><strong>ship_name:</strong> The official name of the ship</li>
+                        <li><strong>production_house:</strong> The production agency the couple is signed to.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Assumptions in dataset:</h3>
+                    <p> I excluded inactive pairings from this analysis due to ambiguities surrounding each pair. Similarly, I excluded new pairings that have not yet appeared as a main or supporting couple in a major series.
+                        Regarding independent pairings—those without an agency—determining inclusion was difficult, as the lack of an agency often creates confusion regarding the official status of a couple. For the sake of this analysis, I define a pairing as official if the actors have appeared as a couple in more than one series.</p>
+                    </div>
+                <iframe id="dataset" class="iframe-container" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtC3PYU5Je_yQGaSHAH4axc8ey9w6VO0yk2JEh86JpbKxo8ZJmFGoHLFzZTfAtjV7ISWOIwhrReAvu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </section>
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p>Based on the analysis of the Thai BL industry, it is evident that the market is highly centralized, with major production agencies like GMMTV and Domundi holding the market share. These agencies have successfully formalized "shipping" culture, transforming fan engagement into a structured business model. 
+                    While the data reveals a strong adherence to heteronormative SemeUke positions particularly regarding height and age gaps, there are signs of a gradual shift. The significant percentage of pairings with equal height and the relative flexibility in age gaps suggest that the industry may be moving toward more diverse dynamics. Ultimately, the synergy between agency management and fan-driven "khu jin" culture remains the primary engine for revenue and international reach within this niche genre.</p>
+            </section>   
+            <section id="sources">
+                <h2>Sources</h2>
+                <p>Domundi pairing list:
+https://kprofiles.com/domundi-pairings-profile/<br>
+
+<br>List of bl pairings: 
+https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fthai-bl-couples-2025-v0-zxh31l1wdt1f1.jpeg%3Fwidth%3D1920%26format%3Dpjpg%26auto%3Dwebp%26s%3D142a757c74c1da6a7eaffcc869a865ebbca7db15<br>
+
+<br>Height difference: 
+https://www.reddit.com/r/GMMTV/comments/1i0fapf/gmmtv_pairings_height_age_difference_charts/
+https://www.reddit.com/r/ThaiBL/comments/1f5fsb1/gmmtv_height_differences/<br>
+
+<br>Thai actor profile:
+https://kprofiles.com/
+https://mydramalist.com/
+</p>
+            </section>           
+
+        </main>
         <aside>
-            <p>an incident</p>
-            <p>an incident</p>
-            <p>an incident</p>
-            <p>an incident</p>
-        </aside>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#analysis1">Analysis 1: Market Share</a></li>
+                <li><a href="#analysis2">Analysis 2: Fan Engagement</a></li>
+                <li><a href="#analysis3">Analysis 3: Height Gap</a></li>
+                <li><a href="#analysis4">Analysis 4: Age Gap</a></li>
+                <li><a href="#dataset">Dataset</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#sources">Sources</a></li>
+            </ul>
+            </aside>
         <footer>
             <p class="italicize">&copy; 2026 Emi Mimiko|All rights reserved</p>
         </footer>
