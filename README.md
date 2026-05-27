@@ -1,6 +1,6 @@
 # About the website
 
-This project seeks to do an in-depth analysis of official BL pairings as constructed and promoted in the Thai BL industry. The title of this website will be *Ship Theory: Exploring Patterns in BL Ships*.
+This project seeks to do an in-depth analysis of official BL pairings as constructed and promoted in the Thai BL industry. The title of this website will be *Ship Theory*.
 
 # How to install this website
 

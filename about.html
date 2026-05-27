@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ship Theory</title>
+                <title>Ship Theory</title>
         <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <meta name="description" content="This page includes all the credits and sources used in the main analysis page">
         <!-- Security Measures:-->
-        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net; img-src 'self'; connect-src 'self' https://cdn.jsdelivr.net/;">
-        <meta
-            name="description"
-            content="This page includes all the credits and sources used in the main analysis page">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self'; connect-src 'self' https://cdn.jsdelivr.net/;">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     </head>
-    <body class="container-fluid bg-light-emi">
+    <body class="container-fluid bg-dgreen-emi">
         <header class="row jumbotron jumbotron-fluid mb-0 pb-0">
               <div class="container">
                 <h1>Ship Theory</h1>
                 <p> A short essay and analysis on patterns in Thailand's BL ships</p>
               </div>
         </header>
-        <nav class="row navbar navbar-expand-sm bg-light justify-content-center mb-2">
+        <nav class="row navbar navbar-expand-sm justify-content-center mb-2">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             </ul>
         </nav>
-        <main class="shadow-sm p-4 mb-4 bg-white">
+        <main class="shadow-sm p-4 mb-4 bg-section-em">
             <h1>Technologies and Sources Used</h1>
-            <p><a href="https://www.chartjs.org/docs/latest/">Chartjs</a> for displaying graphs</p>
-            <p><a href="https://d3js.org/">D3.js</a> for loading the csv dataset</p>
-            <p><a href="https://www.createwithdata.com/chartjs-and-csv/">Visualising CSV data with Chart.js</a> tutorial</p>
-            <p><a href="https://www.w3schools.com/bootstrap4/default.asp">W3Schools Bootstrap4 Tutorials</a> for designing frontend</p>
+            <p><a class="sources" href="https://www.chartjs.org/docs/latest/">Chartjs</a> was used for displaying all the graphs graphs</p>
+            <p><a class="sources" href="https://d3js.org/">D3.js</a> for loading the csv that contains the Dataset</p>
+            <p><a class="sources" href="https://www.createwithdata.com/chartjs-and-csv/">Visualising CSV data with Chart.js</a> is the tutorial used to understand how to work with Chart.js</p>
+            <p><a class="sources" href="https://www.w3schools.com/bootstrap4/default.asp">W3Schools Bootstrap4 Tutorials</a> was used for designing frontend with Bootstrap4</p>
             <h2>Icons Used</h2>
-            <a href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">Google Materials Symbols Icon</a>
             <ul>
-                <li>Copyright</li>
-                <li>Menu Open</li>
-                <li><a href="https://fonts.google.com/icons?icon.query=horizontal&icon.size=24&icon.color=%231f1f1f&selected=Material+Symbols+Outlined:horizontal_rule:FILL@0;wght@400;GRAD@0;opsz@24">Horizontal Line</a></li>
+                <li><a class="sources" href="https://fonts.google.com/icons?selected=Material+Symbols+Outlined:copyright:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=copyright&icon.size=24&icon.color=%231f1f1f">Copyright</a></li>
             </ul>
         </main>
-        <footer class="row bg-dark text-white p-3 fixed-bottom">
-            <p>&copy; 2026 Emi Mimiko|All rights reserved</p>
+        <footer class="row p-3 fixed-bottom">
+            <div class="col text-center">
+                <span class="material-symbols-outlined">copyright</span> 
+                <p>2026 Emi Mimiko | All rights reserved</p>
+            </div>
+            
         </footer>
     </body>
 </html>
