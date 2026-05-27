@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-                <title>Ship Theory</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+        <title>Ship Theory</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta name="description" content="This page includes all the credits and sources used in the main analysis page">
         <!-- Security Measures:-->
         <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self'; connect-src 'self' https://cdn.jsdelivr.net/;">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     </head>
     <body class="container-fluid bg-dgreen-emi">
@@ -21,8 +21,8 @@
         </header>
         <nav class="row navbar navbar-expand-sm justify-content-center mb-2">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
             </ul>
         </nav>
         <main class="shadow-sm p-4 mb-4 bg-section-em">
