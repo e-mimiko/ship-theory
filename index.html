@@ -8,22 +8,49 @@
         <meta name="description" content="This page is an analysis of the shipping industry in Thai BL with charts for visualization">
         <!-- Security Measures:-->
         <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self'; connect-src 'self' https://cdn.jsdelivr.net/;">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     </head>
     <body class="container-fluid bg-dgreen-emi">
-        <header class="row jumbotron jumbotron-fluid mb-0 pb-0">
-              <div class="container">
-                <h1>Ship Theory</h1>
-                <p> A short essay and analysis on patterns in Thailand's BL ships</p>
-              </div>
+        <header class="bg-dgreen-emi cl-lpink-emi">
+            <div class="container flex-main">
+                <img class="d-none d-md-block" src="images/favicon_io/android-chrome-512x512.png" alt="Stylised letter Y representing the abbreviation of the word Yaoi">
+                <div>
+                    <h1>Ship Theory</h1>
+                    <p> A short essay and analysis on patterns in Thailand's BL ships</p>
+                </div>
+            </div>
         </header>
-        <nav class="row navbar navbar-expand-sm justify-content-center mb-2">
-            <ul class="navbar-nav">
+        <nav class="row navbar navbar-expand-sm mb-2 d-none d-md-block bg-dgreen-emi sticky-top">
+            <ul class="navbar-nav justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             </ul>
+        </nav>
+        <nav class="navbar navbar-expand-md d-md-none mb-3 bg-dgreen-emi sticky-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item"><a class="nav-link" href="#introduction"><span data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" >Introduction</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#analysis1"><span data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" >Analysis 1: Market Share</span></a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#analysis1">Analysis 1: Market Share</a></li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <div class="row">
             <main class="col-sm-12 col-md-9">
@@ -79,8 +106,8 @@
                         <p> I excluded inactive pairings from this analysis due to ambiguities surrounding each pair. Similarly, I excluded new pairings that have not yet appeared as a main or supporting couple in a major series.
                             Regarding independent pairings—those without an agency—determining inclusion was difficult, as the lack of an agency often creates confusion regarding the official status of a couple. For the sake of this analysis, I define a pairing as official if the actors have appeared as a couple in more than one series.</p>
                     </div>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe id="dataset" class="embed-responsive-item" title="Excel Dataset of BL ships" aria-hidden="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtC3PYU5Je_yQGaSHAH4axc8ey9w6VO0yk2JEh86JpbKxo8ZJmFGoHLFzZTfAtjV7ISWOIwhrReAvu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                    <div class="ratio ratio-16x9">
+                        <iframe id="dataset" title="Excel Dataset of BL ships" aria-hidden="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtC3PYU5Je_yQGaSHAH4axc8ey9w6VO0yk2JEh86JpbKxo8ZJmFGoHLFzZTfAtjV7ISWOIwhrReAvu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                     </div>
                 </section>
                 <section class="shadow-sm p-4 mb-4 bg-section-em" id="conclusion">
@@ -117,12 +144,13 @@
         </div>
         <footer class="row p-3">
             <div class="col text-center">
-                <p class="italicize">&copy; 2026 Emi Mimiko|All rights reserved</p>
+                <p class="italicize">&copy; 2026 Emi Mimiko | All rights reserved</p>
             </div>
             
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
