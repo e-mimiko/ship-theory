@@ -188,11 +188,13 @@ const highest_engagement_by_agency = production_houses.reduce((acc, agency, i) =
 }
 
 
-// $(document).ready(function () {
-//     $('#collapsibleNavbar a').on('click', function () {
-//         $('#collapsibleNavbar').collapse('hide');
-//     });
-// });
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbar = document.getElementById('collapsibleNavbar');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+    if (bsCollapse) bsCollapse.hide();
+  });
+});
 
 // Request data using D3
-d3.csv("https://cdn.jsdelivr.net/gh/e-mimiko/shiptheory.github.io@latest/dataset/bl-pairings.csv").then(makeCharts);
+d3.csv("https://cdn.jsdelivr.net/gh/e-mimiko/ship-theory@latest/dataset/bl-pairings.csv").then(makeCharts);

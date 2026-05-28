@@ -13,6 +13,7 @@
 
 html{ 
     scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
 }
 
 .material-symbols-outlined.fs-larger {
@@ -25,9 +26,8 @@ html{
     color: var(--lightpink-em);
 }
 
-.navbar{
-    background-color: var(--deepgreen-em);
-    
+a {
+    text-decoration: none;
 }
 
 ul a{
@@ -38,6 +38,13 @@ ul a:hover{
     color: #b5410e;
 }
 
+.nav-link{
+    color: var(--deep-pink-em);
+}
+
+.nav-link:hover{
+    color: #b5410e;
+}
 
 
 .bg-dgreen-emi{
@@ -52,6 +59,10 @@ ul a:hover{
     color: var(--lightpink-em);
 }
 
+.cl-dpink-emi{
+    color: var(--deep-pink-em);
+}
+
 .bg-section-em{
     background-color: var(--lightpink-em);
     color: var(--deepgreen-em);
@@ -61,6 +72,11 @@ ul a:hover{
     background-color: var(--rust-red-em);
     color: var(--lightpink-em);
 }
+
+.navbar-toggler {
+    border-color: var(--deep-pink-em)
+}
+
 
 section{
     letter-spacing:.25vmin;
@@ -75,8 +91,46 @@ section{
 }
 
 
+.flex-main{
+    display: flex;
+    /* gap: 20px; */
+    padding: 5px;
+    /* border: 1px solid black; */
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+img {
+    height: 200px;
+}
+
+.top-s-0{
+    top: 50px;
+}
+
+
+
 footer{
     background-color: var(--deepgreen-em);
     color: var(--lightpink-em);
 }
 
+@media screen and (max-width: 768px) {
+    
+    html{ 
+        scroll-padding-top: 360px; 
+    }
+    header {
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    header {
+        margin-top: 0px;
+        padding: 0px;
+    }
+}
